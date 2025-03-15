@@ -1,0 +1,1 @@
+function setCatBackground() { fetch('https://api.thecatapi.com/v1/images/search') .then(response => response.json()) .then(data => { document.body.innerHTML='';document.body.style.backgroundImage = `url(${data[0].url})`; }); } setCatBackground(); setInterval(setCatBackground, 3000);
